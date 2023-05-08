@@ -19,8 +19,10 @@ pico_sdk_init()
 if (TARGET tinyusb_device)
     add_executable(pico_valve
             main.cpp
+            RTC.cpp
             )
 
+    set_property(TARGET pico_valve PROPERTY CXX_STANDARD 20)
     # pull in common dependencies
     target_link_libraries(pico_valve stdc++ pico_stdlib hardware_rtc hardware_i2c)
 
