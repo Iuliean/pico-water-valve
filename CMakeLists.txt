@@ -22,7 +22,7 @@ if (TARGET tinyusb_device)
             )
 
     # pull in common dependencies
-    target_link_libraries(pico_valve pico_stdlib hardware_rtc)
+    target_link_libraries(pico_valve stdc++ pico_stdlib hardware_rtc hardware_i2c)
 
     # enable usb output, disable uart output
     pico_enable_stdio_usb(pico_valve 1)
