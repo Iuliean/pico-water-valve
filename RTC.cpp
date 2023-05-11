@@ -35,7 +35,7 @@ namespace iu
             date.minute = ((date.minute & 0b01110000) >> 4) * 10 + (date.minute & 0b00001111);
             date.hour   = ((date.hour   & 0b00110000) >> 4) * 10 + (date.hour   & 0b00001111); 
             date.day    = ((date.day    & 0b00110000) >> 4) * 10 + (date.day    & 0b00001111);
-            date.dotw   = (date.dotw    & 0b00000011);
+            date.dotw   = (date.dotw    & 0b00000111);
             date.month  = ((date.month  & 0b00010000) >> 4) * 10 + (date.month  & 0b00001111);
             date.year   = ((date.year   & 0b11110000) >> 4) * 10 + (date.year   & 0b00001111);
         }
